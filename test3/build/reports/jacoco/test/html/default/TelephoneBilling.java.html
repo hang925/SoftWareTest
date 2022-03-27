@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TelephoneBilling.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">test3</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TelephoneBilling.java</span></div><h1>TelephoneBilling.java</h1><pre class="source lang-java linenums">import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
+<span class="fc" id="L3">public class TelephoneBilling {</span>
+    public boolean Judgedate(int []a) {
+<span class="fc" id="L5">        boolean flag = false;</span>
+<span class="pc bpc" id="L6" title="1 of 6 branches missed.">        if ((a[0]%4 == 0 &amp;&amp; a[0]%100 !=0) || (a[0]%400==0)){</span>
+<span class="fc" id="L7">            flag = true;</span>
+        }
+<span class="fc bfc" id="L9" title="All 4 branches covered.">        if(a[1] &lt; 1 || a[1] &gt; 12 )</span>
+<span class="fc" id="L10">            return false;</span>
+<span class="fc bfc" id="L11" title="All 3 branches covered.">        switch (a[1])</span>
+        {
+            case 2:
+<span class="fc bfc" id="L14" title="All 2 branches covered.">                if(flag){</span>
+<span class="pc bpc" id="L15" title="3 of 4 branches missed.">                    if(a[2] &gt; 29 || a[2] &lt; 1)</span>
+<span class="fc" id="L16">                        return false;</span>
+                }
+                else {
+<span class="pc bpc" id="L19" title="1 of 4 branches missed.">                    if (a[2] &gt; 28 || a[2] &lt; 1)</span>
+<span class="fc" id="L20">                        return false;</span>
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+<span class="pc bpc" id="L27" title="1 of 4 branches missed.">                if(a[2] &gt; 30 || a[2] &lt; 1)</span>
+<span class="fc" id="L28">                    return false;</span>
+                break;
+            default:
+<span class="pc bpc" id="L31" title="1 of 4 branches missed.">                if(a[2] &gt; 31 || a[2] &lt; 1)</span>
+<span class="fc" id="L32">                    return false;</span>
+                break;
+        }
+<span class="fc bfc" id="L35" title="All 4 branches covered.">        if(a[3] &lt;0 || a[3] &gt; 23)</span>
+<span class="fc" id="L36">            return false;</span>
+<span class="fc bfc" id="L37" title="All 4 branches covered.">        if(a[4] &lt; 0 || a[4] &gt; 59)</span>
+<span class="fc" id="L38">            return false;</span>
+<span class="fc bfc" id="L39" title="All 4 branches covered.">        if(a[5] &lt; 0 || a[5] &gt; 59)</span>
+<span class="fc" id="L40">            return false;</span>
+<span class="fc" id="L41">        return true;</span>
+    }
+
+
+    public String CostCalculation(int time) {
+<span class="fc" id="L46">        double bill = 0.0f;</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (time &lt;= 20){ //灏忎簬绛変簬20min鐨勬儏鍐�</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (time&lt;=1) { //灏忎簬1min鐨勬儏鍐祘</span>
+<span class="fc" id="L49">                System.out.println(&quot;閫氳瘽鏃堕暱涓嶈冻1min,鎸夌収1min鏀惰垂锛岃垂鐢ㄤ负0.05缇庡厓&quot;);</span>
+<span class="fc" id="L50">                return &quot;閫氳瘽涓嶈冻1min锛岃垂鐢ㄤ负0.05&quot;;</span>
+            } else { //  1 &lt; time &lt;= 20
+<span class="fc" id="L52">                bill = (time) * 0.05;</span>
+<span class="fc" id="L53">                System.out.println(&quot;閫氳瘽鏃堕暱涓�&quot; + time + &quot;min,鎬昏垂鐢ㄤ负&quot; + String.format(&quot;%.2f&quot;, bill));</span>
+<span class="fc" id="L54">                return &quot;閫氳瘽鏃堕棿澶т簬1min,灏忎簬绛変簬20min,閫氳瘽鏃堕暱涓�&quot;+time+&quot;min,鎬昏垂鐢ㄤ负&quot;+String.format(&quot;%.2f&quot;, bill);</span>
+            }
+        }
+        else{
+<span class="fc" id="L58">            bill = time * 1 + (time-20)*0.1;</span>
+<span class="fc" id="L59">            log.println(&quot;閫氳瘽鏃堕暱涓�&quot;+time+&quot;min,鎬昏垂鐢ㄤ负&quot;+String.format(&quot;%.2f&quot;,bill));</span>
+<span class="fc" id="L60">            return &quot;閫氳瘽鏃堕暱澶т簬20min,閫氳瘽鏃堕暱涓�&quot;+time+&quot;min,鎬昏垂鐢ㄤ负&quot;+String.format(&quot;%.2f&quot;, bill);</span>
+        }
+    }
+    public  int testweek(int Year,int Month,int Day) {//鍒ゆ柇鏌愬勾鏌愭湀鏌愭棩涓烘槦鏈熷嚑
+<span class="fc" id="L64">        int iweek = 0;</span>
+<span class="fc" id="L65">        int y=0,c=0,m=0,d=0;</span>
+<span class="pc bpc" id="L66" title="2 of 4 branches missed.">        if(Month == 1 || Month == 2) {</span>
+<span class="nc" id="L67">            c=(Year-1)/100;</span>
+<span class="nc" id="L68">            y=(Year-1)%100;</span>
+<span class="nc" id="L69">            m=Month+12;</span>
+<span class="nc" id="L70">            d=Day;</span>
+        }
+        else {
+<span class="fc" id="L73">            c=Year/100;</span>
+<span class="fc" id="L74">            y=Year%100;</span>
+<span class="fc" id="L75">            m=Month;</span>
+<span class="fc" id="L76">            d=Day;</span>
+        }
+<span class="fc" id="L78">        iweek=y+y/4+c/4-2*c+26*(m+1)/10+d-1;</span>
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">        iweek=iweek&gt;=0?(iweek%7):(iweek%7+7);</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">        if(iweek == 0) {</span>
+<span class="fc" id="L81">                iweek=7;</span>
+        }
+<span class="fc" id="L83">        return iweek;</span>
+    }
+    //鍒ゆ柇鏃ユ湡鏄惁涓轰笁鏈堢殑鏌愪釜鏄熸湡鏃ユ垨鑰呭崄鏈堢殑鏈�鍚庝竴涓槦鏈熸棩骞跺閫氳瘽鏃堕棿杩涜澶勭悊
+    public int testdate1(int Year, int Month,int Day,int Min,int stime, int etime) {//stime etime 鍒ゆ柇鏄惁閫氳瘽鍖洪棿鍖呭惈鏃堕棿杞崲鍖洪棿
+<span class="pc bpc" id="L87" title="7 of 12 branches missed.">        if((Month==3 &amp;&amp; Day + 7 &gt; 31)||(Month==4 &amp;&amp; Day+1&lt;8) || (Month == 3 &amp;&amp; this.testweek(Year, Month, Day) == 7)){</span>
+<span class="pc bpc" id="L88" title="1 of 4 branches missed.">            if(stime &lt;= 2 &amp;&amp; etime &gt; 2) {</span>
+<span class="fc" id="L89">                Min = Min - 60;</span>
+<span class="fc" id="L90">                System.out.println(&quot;鐩墠鏄笁鏈堢殑鏌愪釜鏄熸湡鏃ワ紝涓斿紑濮嬮�氳瘽鏃堕棿鍦ㄤ袱鐐瑰墠锛岀粨鏉熸椂闂村湪涓ょ偣鍚庯紝杩涜鏄ュ鏃堕棿杞崲&quot;);</span>
+            }
+        }
+
+<span class="pc bpc" id="L94" title="3 of 8 branches missed.">        else if(Month==11 &amp;&amp; Day&gt;=1&amp;&amp;Day&lt;=7 &amp;&amp; this.testweek(Year, Month, Day) == 7) {//鍒ゆ柇鏄惁涓�11鏈堢殑绗竴涓槦鏈熸棩</span>
+<span class="pc bpc" id="L95" title="2 of 4 branches missed.">            if(stime &lt;= 2 &amp;&amp; etime &gt;= 2) {</span>
+<span class="fc" id="L96">                Min = Min + 60;</span>
+<span class="fc" id="L97">                System.out.println(&quot;鐩墠鏄崄涓�鏈堢殑绗竴涓槦鏈熸棩锛屼笖寮�濮嬮�氳瘽鏃堕棿鍦ㄤ笁鐐瑰墠锛岀粨鏉熸椂闂村湪涓夌偣鍚庯紝杩涜澶忕鏃堕棿杞崲&quot;);</span>
+            }
+        }
+<span class="fc" id="L100">        return Min;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
