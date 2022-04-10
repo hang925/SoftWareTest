@@ -1,49 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BillingTest" tests="34" skipped="0" failures="0" errors="0" timestamp="2022-03-27T07:16:00" hostname="DESKTOP-9PIP0QA" time="0.155">
+<testsuite name="BillingTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-04-10T09:54:58" hostname="DESKTOP-9PIP0QA" time="0.122">
   <properties/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.027"/>
-  <testcase name="通话时长大于20min" classname="BillingTest" time="0.003"/>
-  <testcase name="通话时长大于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时长大于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时间小于1min" classname="BillingTest" time="0.0"/>
+  <testcase name="通话时长大于20min" classname="BillingTest" time="0.028"/>
+  <testcase name="通话时间小于1min" classname="BillingTest" time="0.001"/>
   <testcase name="通话时长小于1min" classname="BillingTest" time="0.0"/>
   <testcase name="通话时长小于1min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时长大于20min" classname="BillingTest" time="0.0"/>
-  <testcase name="通话时长大于20min" classname="BillingTest" time="0.0"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.0"/>
-  <testcase name="通话时长大于20min" classname="BillingTest" time="0.0"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
+  <testcase name="T3_S3boundarytest()" classname="BillingTest" time="0.001"/>
+  <testcase name="通话时长大于20min" classname="BillingTest" time="0.001"/>
   <testcase name="[1] 2022, 0, 29, 1, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.02"/>
-  <testcase name="[2] 2022, 13, 29, 1, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.002"/>
-  <testcase name="[3] 2000, 2, 30, 1, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.001"/>
-  <testcase name="[4] 2022, 2, 29, 1, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.001"/>
-  <testcase name="[5] 2022, 3, 32, 1, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.001"/>
-  <testcase name="[6] 2022, 4, 31, 1, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.0"/>
-  <testcase name="[7] 2022, 2, 9, -1, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.0"/>
-  <testcase name="[8] 2022, 2, 9, 24, 1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.0"/>
-  <testcase name="[9] 2022, 2, 9, 1, -1, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.001"/>
-  <testcase name="[10] 2022, 2, 9, 1, 60, 29, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.001"/>
-  <testcase name="[11] 2022, 2, 9, 1, 1, -1, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.001"/>
-  <testcase name="[12] 2022, 2, 9, 1, 1, 60, 输入日期不合法，请检查后重新输入" classname="BillingTest" time="0.001"/>
+  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.0"/>
+  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.0"/>
   <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时长小于1min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时长小于1min" classname="BillingTest" time="0.0"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
-  <testcase name="通话时长小于1min" classname="BillingTest" time="0.0"/>
-  <testcase name="通话时间大于1min,小于等于20min" classname="BillingTest" time="0.001"/>
-  <system-out><![CDATA[目前是三月的某个星期日，且开始通话时间在两点前，结束时间在两点后，进行春夏时间转换
-通话时长为20min,总费用为1.00
-通话时长为21min,总费用为21.10
-目前是三月的某个星期日，且开始通话时间在两点前，结束时间在两点后，进行春夏时间转换
-通话时长为21min,总费用为21.10
-目前是十一月的第一个星期日，且开始通话时间在三点前，结束时间在三点后，进行夏秋时间转换
-通话时长为21min,总费用为21.10
-通话时长为20min,总费用为1.00
-通话时长为20min,总费用为1.00
+  <system-out><![CDATA[通话时长为29min,总费用为1.90
 通话时长不足1min,按照1min收费，费用为0.05美元
 目前是三月的某个星期日，且开始通话时间在两点前，结束时间在两点后，进行春夏时间转换
 通话时长不足1min,按照1min收费，费用为0.05美元
@@ -52,27 +20,14 @@
 1
 通话时长不足1min,按照1min收费，费用为0.05美元
 目前是十一月的第一个星期日，且开始通话时间在三点前，结束时间在三点后，进行夏秋时间转换
-通话时长为21min,总费用为21.10
+通话时长为21min,总费用为1.10
 目前是三月的某个星期日，且开始通话时间在两点前，结束时间在两点后，进行春夏时间转换
-通话时长为21min,总费用为21.10
-目前是十一月的第一个星期日，且开始通话时间在三点前，结束时间在三点后，进行夏秋时间转换
-通话时长为20min,总费用为1.00
-通话时长为21min,总费用为21.10
-目前是三月的某个星期日，且开始通话时间在两点前，结束时间在两点后，进行春夏时间转换
-通话时长为20min,总费用为1.00
-通话时长为2min,总费用为0.10
-目前是三月的某个星期日，且开始通话时间在两点前，结束时间在两点后，进行春夏时间转换
-通话时长不足1min,按照1min收费，费用为0.05美元
-目前是十一月的第一个星期日，且开始通话时间在三点前，结束时间在三点后，进行夏秋时间转换
-通话时长不足1min,按照1min收费，费用为0.05美元
+通话时长为89min,总费用为7.90
 通话时长为19min,总费用为0.95
 目前是三月的某个星期日，且开始通话时间在两点前，结束时间在两点后，进行春夏时间转换
-通话时长为19min,总费用为0.95
+通话时长为15min,总费用为0.75
 目前是十一月的第一个星期日，且开始通话时间在三点前，结束时间在三点后，进行夏秋时间转换
 通话时长为19min,总费用为0.95
-通话时长不足1min,按照1min收费，费用为0.05美元
-目前是十一月的第一个星期日，且开始通话时间在三点前，结束时间在三点后，进行夏秋时间转换
-通话时长为20min,总费用为1.00
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
